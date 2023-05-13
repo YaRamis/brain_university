@@ -31,10 +31,7 @@ class GreetScreenWidget extends StatelessWidget {
                 ),
               ),
             ),
-            const Spacer(),
-            SizedBox(
-              height: 600,
-              width: double.infinity,
+            Expanded(
               child: PageView(
                 controller: pageController,
                 children: const [
@@ -46,12 +43,18 @@ class GreetScreenWidget extends StatelessWidget {
                 ],
               ),
             ),
-            SmoothPageIndicator(
-              controller: pageController,
-              count: 5,
-              effect: const WormEffect(dotHeight: 8, dotWidth: 8, spacing: 16),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 40),
+                child: SmoothPageIndicator(
+                  controller: pageController,
+                  count: 5,
+                  effect:
+                      const WormEffect(dotHeight: 8, dotWidth: 8, spacing: 16),
+                ),
+              ),
             ),
-            const Spacer(),
           ],
         ),
       ),

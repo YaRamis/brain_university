@@ -1,5 +1,8 @@
+import 'package:brain_university/theme/app_box_shadows.dart';
 import 'package:brain_university/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'main_menu_market_screen_card_widget.dart';
 
 class MainMenuMarketScreenWidget extends StatelessWidget {
   const MainMenuMarketScreenWidget({Key? key}) : super(key: key);
@@ -15,204 +18,9 @@ class MainMenuMarketScreenWidget extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 20),
-                    child: Container(
-                      // height: 300,
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24),
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                            offset: Offset(0, 10),
-                            color: Color.fromRGBO(0, 0, 0, 0.05),
-                            blurRadius: 50,
-                            spreadRadius: 0,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Container(
-                                color: const Color(0xFFE2E8FF),
-                                height: 171,
-                                width: double.infinity,
-                              ),
-                              Positioned.fill(
-                                child: Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 32, bottom: 16),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Container(
-                                          height: 30,
-                                          alignment: Alignment.center,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 12),
-                                          decoration: BoxDecoration(
-                                            color: AppColors.mainColor,
-                                            borderRadius:
-                                                BorderRadius.circular(4),
-                                          ),
-                                          child: const Text(
-                                            '12 990 руб/мес',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(24.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Bazar',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 13,
-                                    color: AppColors.mainColor,
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                const Text(
-                                  'Wildberries',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 17,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Поможет разобраться в принципах успешной работы на маркетплейсах: что продавать, как находить клиетов, чем выделиться на фоне конкурентов, как начать делегировать задачи и др.',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15,
-                                    color: AppColors.textColor,
-                                  ),
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(height: 24),
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 32,
-                                      alignment: Alignment.center,
-                                      padding: const EdgeInsets.only(
-                                          right: 12, left: 10),
-                                      decoration: BoxDecoration(
-                                          color: const Color.fromRGBO(
-                                              255, 199, 0, 0.2),
-                                          borderRadius:
-                                              BorderRadius.circular(16)),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.star_rounded,
-                                            size: 19,
-                                            color:
-                                                Color.fromRGBO(255, 199, 0, 1),
-                                          ),
-                                          SizedBox(width: 7),
-                                          Text(
-                                            '4,0',
-                                            style: TextStyle(
-                                              color: AppColors.textColor,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(width: 12),
-                                    Container(
-                                      height: 32,
-                                      alignment: Alignment.center,
-                                      padding: const EdgeInsets.only(
-                                          right: 12, left: 10),
-                                      decoration: BoxDecoration(
-                                          color: const Color.fromRGBO(
-                                              65, 104, 245, 0.1),
-                                          borderRadius:
-                                              BorderRadius.circular(16)),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.people_rounded,
-                                            size: 19,
-                                            color:
-                                                Color.fromRGBO(65, 104, 245, 1),
-                                          ),
-                                          SizedBox(width: 7),
-                                          Text(
-                                            '164',
-                                            style: TextStyle(
-                                              color: AppColors.textColor,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(width: 12),
-                                    Container(
-                                      height: 32,
-                                      alignment: Alignment.center,
-                                      padding: const EdgeInsets.only(
-                                          right: 12, left: 10),
-                                      decoration: BoxDecoration(
-                                          color: const Color.fromRGBO(
-                                              68, 68, 68, 0.05),
-                                          borderRadius:
-                                              BorderRadius.circular(16)),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.article_rounded,
-                                            size: 19,
-                                            color:
-                                                Color.fromRGBO(68, 68, 68, 1),
-                                          ),
-                                          SizedBox(width: 7),
-                                          Text(
-                                            '59 статей',
-                                            style: TextStyle(
-                                              color: AppColors.textColor,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                    child: MainMenuMarketScreenCardWidget(),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 4, right: 40),
@@ -263,14 +71,7 @@ class MainMenuMarketScreenWidget extends StatelessWidget {
                       height: 48,
                       child: DecoratedBox(
                         decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              offset: Offset(0, 10),
-                              color: Color.fromRGBO(0, 0, 0, 0.05),
-                              blurRadius: 50,
-                              spreadRadius: 0,
-                            )
-                          ],
+                          boxShadow: const [AppBoxShadows.greyBoxShadow],
                           borderRadius: BorderRadius.circular(24),
                         ),
                         child: TextField(
@@ -323,14 +124,7 @@ class MainMenuMarketScreenWidget extends StatelessWidget {
                   const SizedBox(width: 10),
                   DecoratedBox(
                     decoration: const BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          color: Color.fromRGBO(0, 0, 0, 0.05),
-                          blurRadius: 50,
-                          spreadRadius: 0,
-                        )
-                      ],
+                      boxShadow: [AppBoxShadows.greyBoxShadow],
                       shape: BoxShape.circle,
                     ),
                     // child: CircleAvatar(

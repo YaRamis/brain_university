@@ -19,7 +19,7 @@ class PageViewFinishWidget extends StatelessWidget {
           ),
           const SizedBox(height: 100),
           const Text(
-            'Finish!!!!!',
+            'Добро пожаловать!',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             textAlign: TextAlign.center,
           ),
@@ -32,7 +32,7 @@ class PageViewFinishWidget extends StatelessWidget {
                     .pushReplacementNamed(AppRoutes.mainMenuScreen);
               },
               child: const Text(
-                'Lets START',
+                'Начать',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.center,
               ),

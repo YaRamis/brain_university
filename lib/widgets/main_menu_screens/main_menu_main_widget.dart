@@ -1,8 +1,12 @@
+import 'package:animations/animations.dart';
 import 'package:brain_university/theme/app_colors.dart';
+import 'package:brain_university/widgets/main_menu_screens/main_menu_market_screen/main_menu_market_screen_widget.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'main_menu_market_screen/main_menu_market_screen_widget.dart';
+import 'main_menu_bookmarks_screen/main_menu_bookmarks_screen_widget.dart';
+import 'main_menu_chats_screen/main_menu_chats_screen_widget.dart';
+import 'main_menu_programs_screen/main_menu_programs_screen_widget.dart';
 
 class MainMenuWidget extends StatefulWidget {
   const MainMenuWidget({Key? key}) : super(key: key);
@@ -12,6 +16,13 @@ class MainMenuWidget extends StatefulWidget {
 }
 
 class _MainMenuWidgetState extends State<MainMenuWidget> {
+  final _mainScreens = [
+    const MainMenuMarketScreenWidget(),
+    const MainMenuProgramsScreenWidget(),
+    const MainMenuChatsScreenWidget(),
+    const MainMenuBookmarksScreenWidget(),
+  ];
+
   int _currentIndex = 0;
 
   @override
@@ -22,7 +33,18 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
         child: SafeArea(
           child: Scaffold(
             backgroundColor: const Color(0xFFFCFCFC),
-            body: const MainMenuMarketScreenWidget(),
+            body: PageTransitionSwitcher(
+                transitionBuilder: (
+                  Widget child,
+                  Animation<double> primaryAnimation,
+                  Animation<double> secondaryAnimation,
+                ) =>
+                    FadeThroughTransition(
+                      animation: primaryAnimation,
+                      secondaryAnimation: secondaryAnimation,
+                      child: child,
+                    ),
+                child: _mainScreens[_currentIndex]),
             extendBodyBehindAppBar: true,
             appBar: PreferredSize(
               preferredSize: const Size.fromHeight(52),

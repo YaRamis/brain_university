@@ -5,33 +5,31 @@ class PageViewPageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Column(
-        children: const [
-          SizedBox(height: 50),
-          Icon(
-            Icons.ac_unit_rounded,
-            size: 200,
-            color: Colors.blue,
-          ),
-          SizedBox(height: 100),
-          Text(
-            'Образовательные программы',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        SizedBox(height: 50),
+        Icon(
+          Icons.ac_unit_rounded,
+          size: 200,
+          color: Colors.blue,
+        ),
+        SizedBox(height: 80),
+        Text(
+          'Образовательные программы',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(height: 15),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Text(
+            'Подписки на образовательные программы от 490 руб/мес.',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 15),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: Text(
-              'Подписки на образовательные программы от 490 руб/мес.',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
