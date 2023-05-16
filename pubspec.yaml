@@ -92,6 +92,9 @@ flutter:
           weight: 500
         - asset: assets/fonts/PTRootUI/pt-root-ui_regular.ttf
           weight: 400
+    - family: BrainUniversityIcons
+      fonts:
+       - asset: assets/icons/BrainUniversityIcons.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

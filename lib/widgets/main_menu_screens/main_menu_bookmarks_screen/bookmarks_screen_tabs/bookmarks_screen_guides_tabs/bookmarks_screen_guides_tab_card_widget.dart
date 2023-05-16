@@ -1,10 +1,10 @@
-import 'package:brain_university/widgets/common_widgets/app_card_info_box_widget.dart';
+import 'package:brain_university/theme/brain_university_icons_icons.dart';
+import 'package:brain_university/widgets/common_widgets/app_card_info_box_widgets.dart';
 import 'package:brain_university/widgets/common_widgets/app_card_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../theme/app_colors.dart';
 
-part 'bookmarks_screen_guides_tab_card_info_box_widgets.dart';
 part 'bookmarks_screen_guides_tab_card_text_widgets.dart';
 
 class BookmarksScreenGuidesTabCardWidget extends StatelessWidget {
@@ -34,7 +34,7 @@ class BookmarksScreenGuidesTabCardWidget extends StatelessWidget {
                       radius: 20,
                       backgroundColor: AppColors.mainColor,
                       child: Icon(
-                        Icons.sim_card_download_rounded,
+                        BrainUniversityIcons.downloadBig,
                         color: Colors.white,
                       ),
                     ),
@@ -52,7 +52,7 @@ class BookmarksScreenGuidesTabCardWidget extends StatelessWidget {
                       ],
                     ),
                     const Spacer(),
-                    const _GuidesTabCardDownloadInfoBoxWidget(text: '0'),
+                    const AppCardDownloadInfoBoxWidget(text: '0'),
                   ],
                 ),
               ],

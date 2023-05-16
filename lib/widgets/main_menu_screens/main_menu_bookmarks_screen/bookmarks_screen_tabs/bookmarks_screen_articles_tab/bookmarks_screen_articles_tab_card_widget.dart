@@ -1,10 +1,10 @@
-import 'package:brain_university/widgets/common_widgets/app_card_info_box_widget.dart';
+import 'package:brain_university/theme/brain_university_icons_icons.dart';
+import 'package:brain_university/widgets/common_widgets/app_card_info_box_widgets.dart';
 import 'package:brain_university/widgets/common_widgets/app_card_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../theme/app_colors.dart';
 
-part 'bookmarks_screen_articles_tab_card_info_box_widgets.dart';
 part 'bookmarks_screen_articles_tab_card_text_widgets.dart';
 
 class BookmarksScreenArticlesTabCardWidget extends StatelessWidget {
@@ -38,11 +38,11 @@ class BookmarksScreenArticlesTabCardWidget extends StatelessWidget {
                 const SizedBox(height: 24),
                 Row(
                   children: const [
-                    _ArticlesTabCardRatingInfoBoxWidget(text: '4,0'),
+                    AppCardRatingInfoBoxWidget(text: '4,0'),
                     SizedBox(width: 12),
-                    _ArticlesTabCardTimeInfoBoxWidget(text: '0 минут'),
+                    AppCardTimeInfoBoxWidget(text: '0 минут'),
                     SizedBox(width: 12),
-                    _ArticlesTabCardViewsInfoBoxWidget(text: '0'),
+                    AppCardViewsInfoBoxWidget(text: '0'),
                   ],
                 ),
               ],

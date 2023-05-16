@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:brain_university/theme/app_colors.dart';
+import 'package:brain_university/theme/brain_university_icons_icons.dart';
 import 'package:brain_university/widgets/main_menu_screens/main_menu_market_screen/main_menu_market_screen_widget.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,22 @@ class MainMenuWidget extends StatefulWidget {
 
 class _MainMenuWidgetState extends State<MainMenuWidget> {
   final _mainScreens = [
-    const MainMenuMarketScreenWidget(),
-    const MainMenuProgramsScreenWidget(),
-    const MainMenuChatsScreenWidget(),
-    const MainMenuBookmarksScreenWidget(),
+    {
+      'widget': const MainMenuMarketScreenWidget(),
+      'title': 'Brain University',
+    },
+    {
+      'widget': const MainMenuProgramsScreenWidget(),
+      'title': 'Мои программы',
+    },
+    {
+      'widget': const MainMenuChatsScreenWidget(),
+      'title': 'Чаты',
+    },
+    {
+      'widget': const MainMenuBookmarksScreenWidget(),
+      'title': 'Сохраненное',
+    },
   ];
 
   int _currentIndex = 0;
@@ -44,18 +57,18 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                       secondaryAnimation: secondaryAnimation,
                       child: child,
                     ),
-                child: _mainScreens[_currentIndex]),
+                child: _mainScreens[_currentIndex]['widget'] as Widget?),
             extendBodyBehindAppBar: true,
             appBar: PreferredSize(
               preferredSize: const Size.fromHeight(52),
               child: AppBar(
                 toolbarHeight: 52,
                 titleSpacing: 0,
-                title: const Padding(
-                  padding: EdgeInsets.only(left: 12),
+                title: Padding(
+                  padding: const EdgeInsets.only(left: 12),
                   child: Text(
-                    'Brain University',
-                    style: TextStyle(
+                    _mainScreens[_currentIndex]['title'] as String,
+                    style: const TextStyle(
                       color: AppColors.textColor,
                       fontSize: 24,
                       fontWeight: FontWeight.w700,
@@ -80,7 +93,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                       icon: Stack(
                         children: const [
                           Icon(
-                            Icons.notifications_rounded,
+                            BrainUniversityIcons.notification,
                             color: AppColors.textColor,
                             size: 30,
                           ),
@@ -125,19 +138,19 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                 items: [
                   CustomNavigationBarItem(
                     icon: const Icon(
-                      Icons.shopping_cart_rounded,
+                      BrainUniversityIcons.market,
                     ),
                   ),
                   CustomNavigationBarItem(
                     icon: const Icon(
-                      Icons.apps_rounded,
+                      BrainUniversityIcons.programs,
                     ),
                   ),
                   CustomNavigationBarItem(
                     icon: Stack(
                       children: const [
                         Icon(
-                          Icons.chat_rounded,
+                          BrainUniversityIcons.chat,
                         ),
                         Align(
                           alignment: Alignment.topRight,
@@ -158,7 +171,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                   ),
                   CustomNavigationBarItem(
                     icon: const Icon(
-                      Icons.bookmark_rounded,
+                      BrainUniversityIcons.bookmark,
                     ),
                   ),
                 ],

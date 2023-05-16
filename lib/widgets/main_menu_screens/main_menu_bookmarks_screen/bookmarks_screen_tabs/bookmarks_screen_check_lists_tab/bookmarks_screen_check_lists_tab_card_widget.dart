@@ -1,10 +1,9 @@
-import 'package:brain_university/widgets/common_widgets/app_card_info_box_widget.dart';
+import 'package:brain_university/widgets/common_widgets/app_card_info_box_widgets.dart';
 import 'package:brain_university/widgets/common_widgets/app_card_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../theme/app_colors.dart';
 
-part 'bookmarks_screen_check_lists_tab_card_info_box_widgets.dart';
 part 'bookmarks_screen_check_lists_tab_card_text_widgets.dart';
 
 class BookmarksScreenCheckListsTabCardWidget extends StatelessWidget {
@@ -38,11 +37,11 @@ class BookmarksScreenCheckListsTabCardWidget extends StatelessWidget {
                 const SizedBox(height: 24),
                 Row(
                   children: const [
-                    _CheckListsTabCardRatingInfoBoxWidget(text: '4,0'),
+                    AppCardRatingInfoBoxWidget(text: '4,0'),
                     SizedBox(width: 12),
-                    _CheckListsTabCardTimeInfoBoxWidget(text: '0 минут'),
+                    AppCardTimeInfoBoxWidget(text: '0 минут'),
                     SizedBox(width: 12),
-                    _CheckListsTabCardViewsInfoBoxWidget(text: '0'),
+                    AppCardViewsInfoBoxWidget(text: '0'),
                   ],
                 ),
               ],
