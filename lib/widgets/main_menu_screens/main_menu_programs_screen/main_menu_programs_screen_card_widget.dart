@@ -1,6 +1,6 @@
-import 'package:brain_university/theme/brain_university_icons_icons.dart';
+import 'package:brain_university/resources/brain_university_icons.dart';
 import 'package:brain_university/widgets/common_widgets/app_card_info_box_widgets.dart';
-import 'package:brain_university/widgets/common_widgets/app_card_widget.dart';
+import 'package:brain_university/widgets/common_widgets/app_container_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../theme/app_box_shadows.dart';
@@ -15,7 +15,7 @@ class MainMenuProgramsScreenCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCardWidget(
+    return AppCardContainerWidget(
       child: Column(
         children: [
           Container(

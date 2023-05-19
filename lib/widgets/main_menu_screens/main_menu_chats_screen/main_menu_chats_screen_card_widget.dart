@@ -1,4 +1,4 @@
-import 'package:brain_university/widgets/common_widgets/app_card_widget.dart';
+import 'package:brain_university/widgets/common_widgets/app_container_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../theme/app_box_shadows.dart';
@@ -14,7 +14,7 @@ class MainMenuChatsScreenCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCardWidget(
+    return AppCardContainerWidget(
       borderRadius: 20,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -25,7 +25,7 @@ class MainMenuChatsScreenCardWidget extends StatelessWidget {
               radius: 24,
               backgroundColor: Color(0xFFE2E8FF),
             ),
-            Flexible(
+            Expanded(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Column(
@@ -43,7 +43,6 @@ class MainMenuChatsScreenCardWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 12),
             Container(
               height: 20,
               alignment: Alignment.center,
@@ -52,16 +51,16 @@ class MainMenuChatsScreenCardWidget extends StatelessWidget {
                 color: AppColors.mainColor,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Text(
+              child: const Text(
                 '2',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
                 ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
           ],
         ),
       ),

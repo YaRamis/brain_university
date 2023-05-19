@@ -1,10 +1,11 @@
 import 'package:animations/animations.dart';
 import 'package:brain_university/theme/app_colors.dart';
-import 'package:brain_university/theme/brain_university_icons_icons.dart';
+import 'package:brain_university/resources/brain_university_icons.dart';
 import 'package:brain_university/widgets/main_menu_screens/main_menu_market_screen/main_menu_market_screen_widget.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../app_routes/app_routes.dart';
 import 'main_menu_bookmarks_screen/main_menu_bookmarks_screen_widget.dart';
 import 'main_menu_chats_screen/main_menu_chats_screen_widget.dart';
 import 'main_menu_programs_screen/main_menu_programs_screen_widget.dart';
@@ -45,7 +46,6 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
       child: Material(
         child: SafeArea(
           child: Scaffold(
-            backgroundColor: const Color(0xFFFCFCFC),
             body: PageTransitionSwitcher(
                 transitionBuilder: (
                   Widget child,
@@ -62,27 +62,24 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
             appBar: PreferredSize(
               preferredSize: const Size.fromHeight(52),
               child: AppBar(
-                toolbarHeight: 52,
-                titleSpacing: 0,
                 title: Padding(
                   padding: const EdgeInsets.only(left: 12),
                   child: Text(
                     _mainScreens[_currentIndex]['title'] as String,
-                    style: const TextStyle(
-                      color: AppColors.textColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    ),
                   ),
                 ),
-                shadowColor: Colors.transparent,
-                backgroundColor: Colors.transparent,
                 leadingWidth: 52,
-                leading: const Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: CircleAvatar(
-                    radius: 16,
-                    backgroundColor: Color(0xFFE2E8FF),
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(AppRoutes.myProfileScreen);
+                    },
+                    child: const CircleAvatar(
+                      radius: 16,
+                      backgroundColor: Color(0xFFE2E8FF),
+                    ),
                   ),
                 ),
                 actions: [

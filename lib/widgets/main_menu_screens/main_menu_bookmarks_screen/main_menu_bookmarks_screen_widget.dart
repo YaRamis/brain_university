@@ -1,8 +1,9 @@
 import 'package:brain_university/theme/app_colors.dart';
-import 'package:brain_university/widgets/common_widgets/app_search_bar_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
+import '../../common_widgets/app_buttons.dart';
+import '../../common_widgets/app_text_field_widgets.dart';
 import 'bookmarks_screen_tabs/bookmarks_screen_articles_tab/bookmarks_screen_articles_tab_widget.dart';
 import 'bookmarks_screen_tabs/bookmarks_screen_check_lists_tab/bookmarks_screen_check_lists_tab_widget.dart';
 import 'bookmarks_screen_tabs/bookmarks_screen_guides_tabs/bookmarks_screen_guides_tab_widget.dart';

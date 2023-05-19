@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/app_colors.dart';
-import '../../theme/brain_university_icons_icons.dart';
+import '../../resources/brain_university_icons.dart';
 
 class AppCardInfoBoxWidget extends StatelessWidget {
   final Widget child;

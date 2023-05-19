@@ -1,6 +1,8 @@
-import 'package:brain_university/widgets/common_widgets/app_search_bar_widgets.dart';
 import 'package:flutter/material.dart';
 
+import '../../common_widgets/app_buttons.dart';
+import '../../common_widgets/app_text_field_widgets.dart';
+import '../../program_details_screen/program_details_screen_widget.dart';
 import 'main_menu_market_screen_card_widget.dart';
 
 class MainMenuMarketScreenWidget extends StatelessWidget {
@@ -17,9 +19,18 @@ class MainMenuMarketScreenWidget extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return Stack(
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                    child: MainMenuMarketScreenCardWidget(),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ProgramDetailsScreenWidget(),
+                          ),
+                        );
+                      },
+                      child: MainMenuMarketScreenCardWidget(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 4, right: 40),

@@ -1,6 +1,7 @@
-import 'package:brain_university/widgets/common_widgets/app_search_bar_widgets.dart';
 import 'package:flutter/material.dart';
 
+import '../../common_widgets/app_buttons.dart';
+import '../../common_widgets/app_text_field_widgets.dart';
 import 'main_menu_programs_screen_card_widget.dart';
 
 class MainMenuProgramsScreenWidget extends StatelessWidget {
